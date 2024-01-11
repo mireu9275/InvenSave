@@ -1,0 +1,6 @@
+name: InvenSave
+version: '1.0'
+main: kr.eme.invensave.InvenSave
+api-version: '1.20'
+author: Dev_Eme
+description: KeepInventory Plguin

@@ -1,0 +1,8 @@
+#Copyright 2024 Eme all right reserved.
+#create date : 2024-01-11
+#Developer Discord : deveme
+
+#[개발환경]
+#Spigot 1.20.2
+
+defaultInvenSaveAmount: 5 # 기본 인벤세이브 횟수 ( 기본값: 5 )
