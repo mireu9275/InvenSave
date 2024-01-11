@@ -10,6 +10,15 @@ import java.util.UUID
 object FileManager {
     private val saverFolder = File(main.dataFolder.path + File.separator + "UUIDS")
 
+    fun init() {
+        createDir()
+    }
+
+    private fun createDir() {
+        val uuidDir = File(main.dataFolder, "UUIDS")
+        if (!uuidDir.exists()) uuidDir.mkdirs()
+    }
+
     fun getPlayerFile(pUUID: UUID): FileConfiguration {
         val file = File(saverFolder,"$pUUID.yml")
         val config = YamlConfiguration.loadConfiguration(file)

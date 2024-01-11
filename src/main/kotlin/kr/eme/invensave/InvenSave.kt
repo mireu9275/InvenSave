@@ -1,6 +1,8 @@
 package kr.eme.invensave
 
 import kr.eme.invensave.listeners.InvenSaveListener
+import kr.eme.invensave.managers.FileManager
+import kr.eme.invensave.managers.InvenSaverManager
 import org.bukkit.plugin.java.JavaPlugin
 
 class InvenSave: JavaPlugin() {
@@ -12,6 +14,7 @@ class InvenSave: JavaPlugin() {
     override fun onEnable() {
         main = this
         main.saveDefaultConfig()
+        FileManager.init();
         logger.info("InvenSave Plugin Enable")
         server.pluginManager.registerEvents(InvenSaveListener, this)
     }
