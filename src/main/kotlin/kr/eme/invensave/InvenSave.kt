@@ -20,6 +20,7 @@ class InvenSave: JavaPlugin() {
     }
 
     override fun onDisable() {
+        InvenSaverManager.saveAllSavers()
         logger.info("InvenSave Plguin Disable")
     }
 }
