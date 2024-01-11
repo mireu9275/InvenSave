@@ -14,7 +14,7 @@ class InvenSave: JavaPlugin() {
     override fun onEnable() {
         main = this
         main.saveDefaultConfig()
-        FileManager.init();
+        FileManager.init()
         logger.info("InvenSave Plugin Enable")
         server.pluginManager.registerEvents(InvenSaveListener, this)
     }
