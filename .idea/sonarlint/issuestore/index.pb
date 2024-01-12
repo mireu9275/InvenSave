@@ -9,8 +9,6 @@ f
 6src/main/kotlin/kr/eme/invensave/objects/InvenSaver.kt,0\4\04701c3c7700b391b13588968eb8c914f45bd24d
 n
 >src/main/kotlin/kr/eme/invensave/managers/InvenSaverManager.kt,f\8\f8c44db8cede540edad909d314a6185acd2b4780
-j
-:src/main/kotlin/kr/eme/invensave/managers/ConfigManager.kt,7\1\715c14e9b1d93bf4f0b0253fabf436f943cf5468
 h
 8src/main/kotlin/kr/eme/invensave/managers/FileManager.kt,c\5\c5098e4148323c0543c7f54034c0b6f386ce20c0
 S
@@ -52,3 +50,5 @@ Q.idea/sonarlint/securityhotspotstore/f/8/f8c44db8cede540edad909d314a6185acd2b47
 Q.idea/sonarlint/securityhotspotstore/c/5/c5098e4148323c0543c7f54034c0b6f386ce20c0,7\3\73a01c1ba1546cd86bc42bae55850acb66af2218
 m
 =src/main/kotlin/kr/eme/invensave/commands/InvenSaveCommand.kt,c\8\c89aa111a857d5cfa2ac9b69224a894e7539e4de
+Z
+*src/main/kotlin/kr/eme/invensave/Global.kt,1\7\17728484c4204b71e97f6415feafe621d1eacee1
