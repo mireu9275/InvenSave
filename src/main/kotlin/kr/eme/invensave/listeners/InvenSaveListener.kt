@@ -18,7 +18,7 @@ object InvenSaveListener: Listener {
         event.keepLevel = true
         event.drops.clear()
         event.droppedExp = 0
-        InvenSaverManager.saverAmountSubstract(uuid, 1)
+        InvenSaverManager.saverAmountSubtract(uuid, 1)
     }
 
     @EventHandler

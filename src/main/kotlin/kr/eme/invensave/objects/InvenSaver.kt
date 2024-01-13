@@ -11,7 +11,7 @@ class InvenSaver(
         invenSaveAmount += amount
     }
 
-    fun substractAmount(amount: Int) {
+    fun subtractAmount(amount: Int) {
         invenSaveAmount -= amount
     }
 

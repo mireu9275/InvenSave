@@ -22,7 +22,7 @@ val copyJarToDir by tasks.registering(Copy::class) {
     from(tasks.named<Jar>("jar").flatMap { it.archiveFile })
 
     // 복사할 대상 경로.
-    into("D:\\minecraft\\1.20.2\\plugins")
+    into("D:\\minecraft\\1. 버킷 관련\\1.20.2 spigot\\plugins")
 
     // 파일 이름 변경.
     rename { "InvenSave.jar" }

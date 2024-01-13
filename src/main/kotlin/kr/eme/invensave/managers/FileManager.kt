@@ -19,11 +19,12 @@ object FileManager {
         if (!uuidDir.exists()) uuidDir.mkdirs()
     }
 
-    fun getPlayerFile(pUUID: UUID): FileConfiguration {
-        val file = File(saverFolder,"$pUUID.yml")
+
+    fun createPlayerFile(uuid: UUID): FileConfiguration {
+        val file = File(saverFolder,"$uuid.yml")
         val config = YamlConfiguration.loadConfiguration(file)
         if (!file.exists()) {
-            val defaultAmount = main.config.getInt("defaultInvenSaveAmount", 5)
+            val defaultAmount = main.config.getInt("defaultInvenSaveAmount", 0)
             file.createNewFile()
             // 초기 데이터 설정
             config.set("invenSaveAmount", defaultAmount)
@@ -32,16 +33,21 @@ object FileManager {
         return config
     }
 
+    fun getPlayerFile(uuid: UUID): FileConfiguration {
+        val file = File(saverFolder, "$uuid.yml")
+        return YamlConfiguration.loadConfiguration(file)
+    }
+
     /**
      * Save player file
      *
      * 인벤세이브 횟수를 저장합니다.
-     * @param invenSaver
+     * @param saver
      */
-    fun savePlayerFile(invenSaver: InvenSaver) {
-        val file = File(saverFolder, "${invenSaver.pUUID}")
+    fun savePlayerFile(saver: InvenSaver) {
+        val file = File(saverFolder, "${saver.pUUID}")
         val config = YamlConfiguration.loadConfiguration(file)
-        config.set("invenSaveAmount", invenSaver.invenSaveAmount)
+        config.set("invenSaveAmount", saver.invenSaveAmount)
         config.save(file)
     }
 }

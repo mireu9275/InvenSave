@@ -88,15 +88,15 @@ object InvenSaverManager {
     }
 
     /**
-     * Saver amount substract
+     * Saver amount subtract
      *
      * 플레이어의 인벤세이브 횟수를 amount 만큼 차감합니다.
      * @param uuid
      * @param amount
      */
-    fun saverAmountSubstract(uuid: UUID, amount: Int) {
+    fun saverAmountSubtract(uuid: UUID, amount: Int) {
         val saver: InvenSaver = getSaver(uuid) ?: return
-        saver.substractAmount(amount)
+        saver.subtractAmount(amount)
     }
 
     /**
