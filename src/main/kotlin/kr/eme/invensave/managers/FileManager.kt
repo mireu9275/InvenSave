@@ -45,7 +45,7 @@ object FileManager {
      * @param saver
      */
     fun savePlayerFile(saver: InvenSaver) {
-        val file = File(saverFolder, "${saver.pUUID}")
+        val file = File(saverFolder, "${saver.uuid}.yml")
         val config = YamlConfiguration.loadConfiguration(file)
         config.set("invenSaveAmount", saver.invenSaveAmount)
         config.save(file)

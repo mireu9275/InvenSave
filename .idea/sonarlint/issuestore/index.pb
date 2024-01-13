@@ -122,3 +122,7 @@ G.idea/sonarlint/issuestore/8/8/88a9255124c95bdc913197c120a8d560edc59c8e,a\e\ae
 Q.idea/sonarlint/securityhotspotstore/c/8/c89aa111a857d5cfa2ac9b69224a894e7539e4de,b\8\b81a408ae605ffa5284396242dcb18474c2edf22
 Å
 Q.idea/sonarlint/securityhotspotstore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302,3\0\30205a209c6ce77c4cfc19a09e6f57c588b7fb88
+q
+Asrc/main/kotlin/kr/eme/invensave/managers/InvenSaveBookManager.kt,0\3\03830a48150d9b9c0e3fe7611f160ded91cb0961
+j
+:src/main/kotlin/kr/eme/invensave/managers/NBTTagManager.kt,e\1\e10832e04bd05c461dedac1591815e1791d846c6

@@ -4,7 +4,7 @@ import kr.eme.invensave.managers.FileManager
 import java.util.*
 
 class InvenSaver(
-    val pUUID: UUID,
+    val uuid: UUID,
     var invenSaveAmount: Int
 ) {
     fun addAmount(amount: Int) {
