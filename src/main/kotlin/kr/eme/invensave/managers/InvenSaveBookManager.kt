@@ -1,6 +1,7 @@
 package kr.eme.invensave.managers
 
 import kr.eme.invensave.InvenSave.Companion.main
+import kr.eme.invensave.hasEmptySlot
 import org.bukkit.Material
 import org.bukkit.NamespacedKey
 import org.bukkit.entity.Player
@@ -26,9 +27,8 @@ object InvenSaveBookManager {
 
     fun giveInvenSaveBook(player: Player, amount: Int) {
         val item = createInvenSaveBook(amount)
-        val playerInventory = player.inventory
-        val emptySlots = playerInventory.contents.count { it == null }
-        if (emptySlots < item.amount) {
+        val test = hasEmptySlot(player)
+        if (!hasEmptySlot(player)) {
             player.sendMessage("인벤토리 공간이 부족합니다. 인벤토리를 비운 후 다시 시도해주세요.")
             return
         }

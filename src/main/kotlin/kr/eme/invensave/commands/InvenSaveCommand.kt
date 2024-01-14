@@ -63,15 +63,16 @@ object InvenSaveCommand: CommandExecutor {
         try {
             if (sender !is Player) return
             if (args.size == 2) {
+                if (!sender.isOp) return
                 val targetUUID = getUUIDFromPlayerName(args[1])
                 val targetSaver = InvenSaverManager.getSaver(targetUUID)
                 if (targetSaver == null) {
                     val amount = InvenSaverManager.getOfflineSaverAmount(targetUUID)
-                    sender.sendMessage("남은 인벤세이브 횟수는 $amount 회 입니다.")
+                    sender.sendMessage("${args[1]}님의 남은 인벤세이브 횟수는 $amount 회 입니다.")
                 }
                 else {
                     val amount = targetSaver.invenSaveAmount
-                    sender.sendMessage("남은 인벤세이브 횟수는 $amount 회 입니다.")
+                    sender.sendMessage("${args[1]}님의 남은 인벤세이브 횟수는 $amount 회 입니다.")
                 }
             } else {
                 val senderUUID = sender.uniqueId
@@ -87,6 +88,7 @@ object InvenSaveCommand: CommandExecutor {
     private fun giveInvenSaveBook(sender: CommandSender, args: Array<out String>) {
         try {
             if (sender !is Player) return
+            if (!sender.isOp) return
             val amount = args[1].toInt()
             InvenSaveBookManager.giveInvenSaveBook(sender, amount)
         } catch (e: Exception) {
@@ -121,6 +123,7 @@ object InvenSaveCommand: CommandExecutor {
     private fun addSaverAmount(sender: CommandSender, args: Array<out String>) {
         try {
             if (args.size != 3) return
+            if (!sender.isOp) return
             val saver = getSaver(sender, args[2]) ?: return
             val amount = args[1].toInt()
             saver.addAmount(amount)
@@ -139,6 +142,7 @@ object InvenSaveCommand: CommandExecutor {
     private fun subtractSaverAmount(sender: CommandSender, args: Array<out String>) {
         try {
             if (args.size != 3) return
+            if (!sender.isOp) return
             val saver = getSaver(sender, args[2]) ?: return
             val amount = args[1].toInt()
             val saverAmount = InvenSaverManager.getSaverAmount(saver)
@@ -162,6 +166,7 @@ object InvenSaveCommand: CommandExecutor {
     private fun setSaverAmount(sender: CommandSender, args: Array<out String>) {
         try {
             if (args.size != 3) return
+            if (!sender.isOp) return
             val saver = getSaver(sender, args[2]) ?: return
             val amount = args[1].toInt()
             saver.setAmount(amount)

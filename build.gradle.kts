@@ -10,10 +10,14 @@ repositories {
     mavenCentral()
     mavenLocal()
     maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
+    maven {
+        url = uri("D:\\minecraft\\pluginProject\\library")
+    }
 }
 
 dependencies {
     compileOnly("org.spigotmc:spigot-api:1.20.2-R0.1-SNAPSHOT")
+    compileOnly("kr.eme.library:EmeLibrary:1.0")
 }
 
 // 빌드된 JAR 파일을 복사하는 작업 정의
